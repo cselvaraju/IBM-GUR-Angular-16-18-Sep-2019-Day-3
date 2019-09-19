@@ -1,0 +1,18 @@
+<div>
+  <h3>Post List</h3>
+  <p>
+    <button (click)="getPosts()">Get Posts</button>
+    &nbsp;
+    <button (click)="createPost()">Create Post</button>
+  </p>
+  <div *ngIf="postList">
+    <mat-card *ngFor="let post of postList">
+      <mat-card-title>{{post.title}}</mat-card-title>
+      <mat-card-subtitle>{{post.id}}</mat-card-subtitle>
+      <mat-card-content>{{post.body}}</mat-card-content>
+    </mat-card>
+  </div>
+  <div *ngIf="loading">
+    <img src="assets/giphy.gif" alt="Loading...">
+  </div>
+</div>

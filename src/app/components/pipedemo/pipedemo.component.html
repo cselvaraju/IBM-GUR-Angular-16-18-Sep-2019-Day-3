@@ -1,0 +1,30 @@
+<div>
+  <h3>Pipe Demo Component</h3>
+  <div>
+    <label>
+      Enter some text:
+      <input type="text" [(ngModel)]="message">
+    </label>
+    <br>
+      Original message: {{ message }}
+      <br>
+      Uppercased: {{ message | uppercase }}
+      <br>
+      Lowercased: {{ message | lowercase }}
+      <br>
+      Titlecased: {{ message | titlecase }}
+      <br>
+      Reversed: {{ message | reversetext }}
+      <br>
+      Piglatin: {{ message | piglatin }}
+  </div>
+  <p>
+    Today is: {{ today | date:'short' | lowercase }}
+  </p>
+  <p>
+    Favourite Actor: {{ favActor | json }}
+  </p>
+  <p>
+    Price is: {{ price | currency:'\u20b9' }}
+  </p>
+</div>
